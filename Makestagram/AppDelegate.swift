@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       println("login-in failed")
     }
     
+    let acl = PFACL()
+    acl.setPublicReadAccess(true)
+    PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+    
     return true
   }
 
